@@ -301,4 +301,6 @@ Take a look at the contents of the\'a0\cb9 CHANGE_HISTORY\cb3 \'a0table to see w
 \f5\fs40 \cf0 \cb3 \strokec8 Create Your Second Database Migration\
 \pard\pardeftab720\partightenfactor0
 
-\f3\fs28 \cf0 \cb3 \strokec8 In this script you will create your second database migration and have GitHub Actions automatically deploy it to your Snowflake account (no need to manually run the workflow this time)!}
+\f3\fs28 \cf0 \cb3 \strokec8 In this script you will create your second database migration and have GitHub Actions automatically deploy it to your Snowflake account (no need to manually run the workflow this time)!\
+\
+Then commit the new script and push the changes to your GitHub repository. Because of the continuous integration trigger we created in the YAML definition, your workflow should have automatically started a new run. Open up the workflow, click on the newest run, then click on the\'a0\cb9 deploy-snowflake-changes-job\cb3 \'a0job and browse through the output from the various steps. In particular you might want to review the output from the\'a0\cb9 Run schemachange\cb3 \'a0step.}
