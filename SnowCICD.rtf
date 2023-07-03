@@ -2,17 +2,17 @@
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-UltraLight;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 HelveticaNeue-Bold;
 \f3\fswiss\fcharset0 Helvetica;\f4\froman\fcharset0 Times-Roman;\f5\fswiss\fcharset0 ArialMT;
 \f6\fnil\fcharset0 .SFNS-Regular_wdth_opsz110000_GRAD_wght2580000;\f7\fnil\fcharset0 LucidaGrande;\f8\fswiss\fcharset0 Helvetica-Oblique;
-}
+\f9\fnil\fcharset0 Menlo-Regular;\f10\fnil\fcharset0 Menlo-Italic;}
 {\colortbl;\red255\green255\blue255;\red27\green27\blue27;\red255\green255\blue255;\red11\green91\blue174;
 \red0\green0\blue0;\red24\green26\blue30;\red244\green246\blue249;\red0\green0\blue0;\red226\green229\blue232;
 \red246\green247\blue249;\red30\green37\blue48;\red26\green28\blue31;\red193\green193\blue193;\red109\green109\blue109;
 \red175\green180\blue186;\red45\green155\blue66;\red36\green180\blue216;\red52\green109\blue241;\red239\green21\blue143;
-}
+\red252\green70\blue117;\red34\green31\blue35;\red251\green251\blue249;\red105\green213\blue226;}
 {\*\expandedcolortbl;;\cssrgb\c14118\c14118\c14118;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c44314\c73725;
 \cssrgb\c0\c0\c0\c84706\cname controlTextColor;\cssrgb\c12157\c13725\c15686;\cssrgb\c96471\c97255\c98039;\cssrgb\c0\c0\c0;\cssrgb\c90980\c91765\c92941;
 \cssrgb\c97255\c97647\c98039;\cssrgb\c15686\c19608\c24706;\cssrgb\c13725\c14902\c16078;\cssrgb\c80000\c80000\c80000;\cssrgb\c50196\c50196\c50196;
 \cssrgb\c74118\c75686\c77647;\cssrgb\c20392\c65882\c32549;\cssrgb\c14118\c75686\c87843;\cssrgb\c25882\c52157\c95686;\cssrgb\c96078\c21961\c62745;
-}
+\cssrgb\c100000\c38039\c53333;\cssrgb\c17647\c16471\c18039;\cssrgb\c98824\c98824\c98039;\cssrgb\c47059\c86275\c90980;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid2\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid1}
 {\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
@@ -303,4 +303,24 @@ Take a look at the contents of the\'a0\cb9 CHANGE_HISTORY\cb3 \'a0table to see w
 
 \f3\fs28 \cf0 \cb3 \strokec8 In this script you will create your second database migration and have GitHub Actions automatically deploy it to your Snowflake account (no need to manually run the workflow this time)!\
 \
-Then commit the new script and push the changes to your GitHub repository. Because of the continuous integration trigger we created in the YAML definition, your workflow should have automatically started a new run. Open up the workflow, click on the newest run, then click on the\'a0\cb9 deploy-snowflake-changes-job\cb3 \'a0job and browse through the output from the various steps. In particular you might want to review the output from the\'a0\cb9 Run schemachange\cb3 \'a0step.}
+Then commit the new script and push the changes to your GitHub repository. Because of the continuous integration trigger we created in the YAML definition, your workflow should have automatically started a new run. Open up the workflow, click on the newest run, then click on the\'a0\cb9 deploy-snowflake-changes-job\cb3 \'a0job and browse through the output from the various steps. In particular you might want to review the output from the\'a0\cb9 Run schemachange\cb3 \'a0step.\
+\
+\
+\
+On MSCode click explorer\
+Click new file\
+File name with V1.1.2__updated_objects.sql\
+\pard\pardeftab720\partightenfactor0
+
+\f9\fs24 \cf20 \cb21 \strokec20 USE\cf22 \strokec22  \cf20 \strokec20 SCHEMA\cf22 \strokec22  DEMO;\cb1 \
+\cf20 \cb21 \strokec20 ALTER\cf22 \strokec22  \cf20 \strokec20 TABLE\cf22 \strokec22  HELLO_WORLD \cf20 \strokec20 ADD\cf22 \strokec22  COLUMN AGE 
+\f10\i \cf23 \strokec23 NUMBER
+\f9\i0 \cf22 \strokec22 ;\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs28 \cf0 \cb3 \strokec8 \
+Save file\
+\
+Click Source Control\
+Commit \
+}
